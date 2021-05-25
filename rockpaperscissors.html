@@ -7,11 +7,53 @@
     <body>
         <script>
 //Write a function that will randomly return "Rock", "Paper"  or "Scissors"
-function computerPlay(string) {
+
+function computerPlay() {
     let array = ['Rock', 'Paper', 'Scissors'];
     let pickOneElement = array[Math.floor(Math.random()*array.length)];
    return pickOneElement;
 }
+
+//Write a function that plays a single round of Rock Paper Scissors for both Player and Computer
+
+function playRound(playerSelection, computerSelection) {
+    console.log(computerSelection);
+    if ((playerSelectionUpper === 'ROCK' && computerSelectionUpper === 'ROCK') ||
+        (playerSelectionUpper === 'SCISSORS' && computerSelectionUpper === 'SCISSORS')||
+        (playerSelectionUpper === 'PAPER' && computerSelectionUpper === 'PAPER'))
+    {
+        return 'It\'s a tie.';
+    } else {
+        if ((playerSelectionUpper === 'ROCK' && computerSelectionUpper === 'PAPER') ||
+           (playerSelectionUpper === 'PAPER' && computerSelectionUpper === 'SCISSORS') ||
+           (playerSelectionUpper === 'SCISSORS' && computerSelectionUpper === 'ROCK'))
+           {
+               return 'You lose.'
+           }
+           else {
+               return 'You win.'
+           }
+    }
+}
+const playerSelection = 'papER';
+const computerSelection= computerPlay();
+const playerSelectionUpper = playerSelection.toUpperCase();
+const computerSelectionUpper = computerSelection.toUpperCase();
+console.log(playRound(playerSelection, computerSelection));
+  
+    
+
+function game() {
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+}
+
+
+
+   
         </script>
     </body>
 </html>
