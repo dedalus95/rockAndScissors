@@ -20,6 +20,7 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     
     computerPlay();
+    console.log(computerPlay());
     if ((playerSelectionUpper === 'ROCK' && computerSelectionUpper === 'ROCK') ||
         (playerSelectionUpper === 'SCISSORS' && computerSelectionUpper === 'SCISSORS')||
         (playerSelectionUpper === 'PAPER' && computerSelectionUpper === 'PAPER'))
@@ -45,15 +46,15 @@ const computerSelectionUpper = computerSelection.toUpperCase();
 
 
 
-function game() {
-    playerSelection = prompt('Make your choice.');
-    console.log(playRound(computerSelection,playerSelection));
+//function game() {
+  //  playerSelection = prompt('Make your choice.');
+   // console.log(playRound(computerSelection,playerSelection));
     
-}
+//}
 
-for (let i = 0; i < 5; i++) {
-    game();
-}
+//for (let i = 0; i < 5; i++) {
+//    game();
+//}
 
 
    
