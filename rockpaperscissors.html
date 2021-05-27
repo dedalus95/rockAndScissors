@@ -18,7 +18,7 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
  
-  console.log(computerPlay());
+  
     if ((playerSelectionUpper === 'ROCK' && computerSelectionUpper === 'ROCK') ||
         (playerSelectionUpper === 'SCISSORS' && computerSelectionUpper === 'SCISSORS')||
         (playerSelectionUpper === 'PAPER' && computerSelectionUpper === 'PAPER'))
@@ -37,10 +37,12 @@ function playRound(playerSelection, computerSelection) {
            }
     }
 }
-const playerSelection = 'papER';
+const playerSelection = 'rock';
 const computerSelection = computerPlay();
 const playerSelectionUpper = playerSelection.toUpperCase();
 const computerSelectionUpper = computerSelection.toUpperCase();
+console.log(computerPlay());
+console.log(playRound(playerSelection, computerSelection));
 
 
 //Write  a function that plays playRound() five time in a row
