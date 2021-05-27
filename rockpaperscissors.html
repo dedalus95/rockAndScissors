@@ -7,42 +7,51 @@
     <body>
         <script>
 //Write a function that will randomly return "Rock", "Paper"  or "Scissors"
-
 function computerPlay() {
     let array = ['Rock', 'Paper', 'Scissors'];
     let pickOneElement = array[Math.floor(Math.random()*array.length)];
    return pickOneElement;
 }
-
 //Write a function that plays a single round of Rock Paper Scissors for both Player and Computer
 
-function playRound(playerSelection, computerSelection) {
-   
-    if ((playerSelectionUpper === 'ROCK' && computerSelectionUpper === 'ROCK') ||
-        (playerSelectionUpper === 'SCISSORS' && computerSelectionUpper === 'SCISSORS')||
-        (playerSelectionUpper === 'PAPER' && computerSelectionUpper === 'PAPER'))
+function playRound(playerSelectionUpper) {
+    console.log(computerPlay());
+
+
+    if ((playerSelectionUpper === 'ROCK' && computerPlay() === 'Rock') ||
+        (playerSelectionUpper === 'SCISSORS' && computerPlay() === 'Scissors')||
+        (playerSelectionUpper === 'PAPER' && computerPlay() === 'Paper'))
     {
         return 'It\'s a tie.';
     } else {
-        if ((playerSelectionUpper === 'ROCK' && computerSelectionUpper === 'PAPER') ||
-           (playerSelectionUpper === 'PAPER' && computerSelectionUpper === 'SCISSORS') ||
-           (playerSelectionUpper === 'SCISSORS' && computerSelectionUpper === 'ROCK'))
+        if ((playerSelectionUpper === 'ROCK' && computerPlay() === 'Paper') ||
+           (playerSelectionUpper === 'PAPER' && computerPlay() === 'Scissors') ||
+           (playerSelectionUpper === 'SCISSORS' && computerPlay() === 'Rock'))
            {
                return 'You lose.';
            }
            else {
                return 'You win.';
-
            }
     }
-    
 
 }
 const playerSelection = 'papER';
-const computerSelection= computerPlay();
+
 const playerSelectionUpper = playerSelection.toUpperCase();
-const computerSelectionUpper = computerSelection.toUpperCase();
-console.log(computerSelection);
+
+
+  
+    
+function game() {
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+}
+
+
 
 
 
