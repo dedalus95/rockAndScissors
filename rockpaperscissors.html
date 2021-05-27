@@ -17,7 +17,8 @@ function computerPlay() {
 //Write a function that plays a single round of Rock Paper Scissors for both Player and Computer
 
 function playRound(playerSelection, computerSelection) {
-   console.log(computerPlay());
+ 
+  console.log(computerPlay());
     if ((playerSelectionUpper === 'ROCK' && computerSelectionUpper === 'ROCK') ||
         (playerSelectionUpper === 'SCISSORS' && computerSelectionUpper === 'SCISSORS')||
         (playerSelectionUpper === 'PAPER' && computerSelectionUpper === 'PAPER'))
@@ -37,34 +38,13 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 const playerSelection = 'papER';
-const computerSelection= computerPlay();
+const computerSelection = computerPlay();
 const playerSelectionUpper = playerSelection.toUpperCase();
 const computerSelectionUpper = computerSelection.toUpperCase();
 
-function makeYourChoice() {
-    playerSelection = prompt('Make your choice.')
-}
+
 //Write  a function that plays playRound() five time in a row
 
-function game() {
-    makeYourChoice();
-    playRound();
-    
-    makeYourChoice();
-    playRound();
-
-    makeYourChoice();
-    playRound();
-   
-    makeYourChoice();
-    playRound();
-
-    makeYourChoice();
-    playRound();
-
-    
- 
-}
 
 
 
