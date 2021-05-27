@@ -18,6 +18,8 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     console.log(computerSelection);
+   
+    
     if ((playerSelectionUpper === 'ROCK' && computerSelectionUpper === 'ROCK') ||
         (playerSelectionUpper === 'SCISSORS' && computerSelectionUpper === 'SCISSORS')||
         (playerSelectionUpper === 'PAPER' && computerSelectionUpper === 'PAPER'))
@@ -28,12 +30,13 @@ function playRound(playerSelection, computerSelection) {
            (playerSelectionUpper === 'PAPER' && computerSelectionUpper === 'SCISSORS') ||
            (playerSelectionUpper === 'SCISSORS' && computerSelectionUpper === 'ROCK'))
            {
-               return 'You lose.'
+               return 'You lose.';
            }
            else {
-               return 'You win.'
+               return 'You win.';
            }
     }
+    
 }
 const playerSelection = 'papER';
 const computerSelection= computerPlay();
