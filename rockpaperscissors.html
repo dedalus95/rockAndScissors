@@ -14,19 +14,19 @@ function computerPlay() {
 }
 //Write a function that plays a single round of Rock Paper Scissors for both Player and Computer
 
-function playRound(playerSelectionUpper) {
+function playRound(playerSelectionUpper, computerSelection) {
     console.log(computerPlay());
 
 
-    if ((playerSelectionUpper === 'ROCK' && computerPlay() === 'ROCK') ||
-        (playerSelectionUpper === 'SCISSORS' && computerPlay() === 'SCISSORS')||
-        (playerSelectionUpper === 'PAPER' && computerPlay() === 'PAPER'))
+    if ((playerSelectionUpper === 'ROCK' && computerSelection === 'Rock') ||
+        (playerSelectionUpper === 'SCISSORS' && computerSelection === 'Scissors')||
+        (playerSelectionUpper === 'PAPER' && computerSelection === 'Paper'))
     {
         return 'It\'s a tie.';
     } else {
-        if ((playerSelectionUpper === 'ROCK' && computerPlay() === 'PAPER') ||
-           (playerSelectionUpper === 'PAPER' && computerPlay() === 'SCISSORS') ||
-           (playerSelectionUpper === 'SCISSORS' && computerPlay() === 'ROCK'))
+        if ((playerSelectionUpper === 'ROCK' && computerSelection === 'Paper') ||
+           (playerSelectionUpper === 'PAPER' && computerSelection === 'Scissors') ||
+           (playerSelectionUpper === 'SCISSORS' && computerSelection === 'Rock'))
            {
                return 'You lose.';
            }
@@ -37,7 +37,7 @@ function playRound(playerSelectionUpper) {
 
 }
 const playerSelection = 'papER';
-
+const computerSelection = computerPlay();
 const playerSelectionUpper = playerSelection.toUpperCase();
 
 
