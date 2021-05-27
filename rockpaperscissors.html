@@ -14,9 +14,12 @@ function computerPlay() {
    return pickOneElement;
 }
 
+
 //Write a function that plays a single round of Rock Paper Scissors for both Player and Computer
 
 function playRound(playerSelection, computerSelection) {
+    
+    computerPlay();
     if ((playerSelectionUpper === 'ROCK' && computerSelectionUpper === 'ROCK') ||
         (playerSelectionUpper === 'SCISSORS' && computerSelectionUpper === 'SCISSORS')||
         (playerSelectionUpper === 'PAPER' && computerSelectionUpper === 'PAPER'))
@@ -44,9 +47,8 @@ const computerSelectionUpper = computerSelection.toUpperCase();
 
 function game() {
     playerSelection = prompt('Make your choice.');
-    console.log(computerSelection);
     console.log(playRound(computerSelection,playerSelection));
-
+    
 }
 
 for (let i = 0; i < 5; i++) {
