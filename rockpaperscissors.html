@@ -12,23 +12,30 @@ function computerPlay() {
     let pickOneElement = array[Math.floor(Math.random()*array.length)];
    return pickOneElement;
 }
+
+
 //Write a function that plays a single round of Rock Paper Scissors for both Player and Computer
 
-function playRound(playerSelectionUpper) {
-    console.log(computerPlay());
 
 
-    if ((playerSelectionUpper === 'ROCK' && computerPlay() === 'Rock') ||
-        (playerSelectionUpper === 'SCISSORS' && computerPlay() === 'Scissors')||
-        (playerSelectionUpper === 'PAPER' && computerPlay() === 'Paper'))
+
+function playRound() {
+
+let playerSelection = 'paper';
+const computerSelection = computerPlay();
+console.log(computerSelection);
+    
+    if ((playerSelection === 'rock' && computerSelection === 'Rock') ||
+        (playerSelection === 'scissors' && computerSelection === 'Scissors')||
+        (playerSelection === 'paper' && computerSelection === 'Paper'))
     {
-        return 'It\'s a tie.';
+        return 'It\'s a tie.' ;
     } else {
-        if ((playerSelectionUpper === 'ROCK' && computerPlay() === 'Paper') ||
-           (playerSelectionUpper === 'PAPER' && computerPlay() === 'Scissors') ||
-           (playerSelectionUpper === 'SCISSORS' && computerPlay() === 'Rock'))
+        if ((playerSelection === 'rock' && computerSelection === 'Paper') ||
+           (playerSelection === 'paper' && computerSelection === 'Scissors') ||
+           (playerSelection === 'scissors' && computerSelection === 'Rock'))
            {
-               return 'You lose.';
+               return 'You lose.' ;
            }
            else {
                return 'You win.';
@@ -36,20 +43,7 @@ function playRound(playerSelectionUpper) {
     }
 
 }
-const playerSelection = 'papER';
 
-const playerSelectionUpper = playerSelection.toUpperCase();
-
-
-  
-    
-function game() {
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-}
 
 
 
