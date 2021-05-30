@@ -21,35 +21,56 @@ function computerPlay() {
 
 function playRound() {
 
-let playerSelection = 'paper';
+
 const computerSelection = computerPlay();
+playerSelection = prompt('make a decision');
+let playerSelectionUpper = playerSelection.toUpperCase();
 console.log(computerSelection);
-    
-    if ((playerSelection === 'rock' && computerSelection === 'Rock') ||
-        (playerSelection === 'scissors' && computerSelection === 'Scissors')||
-        (playerSelection === 'paper' && computerSelection === 'Paper'))
+
+ 
+
+    if ((playerSelectionUpper === 'ROCK' && computerSelection === 'Rock') ||
+        (playerSelectionUpper === 'SCISSORS' && computerSelection === 'Scissors')||
+        (playerSelectionUpper === 'PAPER' && computerSelection === 'Paper'))
     {
-        return 'It\'s a tie.' ;
-    } else {
-        if ((playerSelection === 'rock' && computerSelection === 'Paper') ||
-           (playerSelection === 'paper' && computerSelection === 'Scissors') ||
-           (playerSelection === 'scissors' && computerSelection === 'Rock'))
+        return  'It\'s a tie.' ;
+    } else if
+         ((playerSelectionUpper === 'ROCK' && computerSelection === 'Paper') ||
+           (playerSelectionUpper === 'PAPER' && computerSelection === 'Scissors') ||
+           (playerSelectionUpper === 'SCISSORS' && computerSelection === 'Rock'))
            {
-               return 'You lose.' ;
+               return   `You lose. ${computerSelection} beats ${playerSelectionUpper}.`;
+           }
+           else if 
+           ((playerSelectionUpper === 'PAPER' && computerSelection === 'Rock') ||
+           (playerSelectionUpper === 'SCISSORS' && computerSelection === 'Paper') ||
+           (playerSelectionUpper === 'ROCK' && computerSelection === 'Scissors'))
+           {
+               return  `You win. ${playerSelectionUpper} beats ${computerSelection}.`;
            }
            else {
-               return 'You win.';
+               return 'Invalid choice.'
            }
     }
 
+
+
+
+
+function game() {
+console.log(playRound());
+
+}
+for (
+    i = 0; i < 5; i++
+)
+
+{
+    game();
+    
 }
 
 
-
-
-
-
-   
         </script>
     </body>
 </html>
