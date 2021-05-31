@@ -39,14 +39,16 @@ console.log(computerSelection);
            (playerSelectionUpper === 'PAPER' && computerSelection === 'Scissors') ||
            (playerSelectionUpper === 'SCISSORS' && computerSelection === 'Rock'))
            {
-               return   `You lose. ${computerSelection} beats ${playerSelectionUpper}.`;
+               computerScore++;
+               return `You lose. ${computerSelection} beats ${playerSelectionUpper}.`;
            }
            else if 
            ((playerSelectionUpper === 'PAPER' && computerSelection === 'Rock') ||
            (playerSelectionUpper === 'SCISSORS' && computerSelection === 'Paper') ||
            (playerSelectionUpper === 'ROCK' && computerSelection === 'Scissors'))
            {
-               return  `You win. ${playerSelectionUpper} beats ${computerSelection}.`;
+                playerScore++;
+               return `You win. ${playerSelectionUpper} beats ${computerSelection}.`;
            }
            else {
                return 'Invalid choice.'
@@ -54,15 +56,30 @@ console.log(computerSelection);
     }
 
 
-
+let computerScore = parseInt(0);
+let playerScore = parseInt(0);
 
 
 function game() {
 
-
 console.log(playRound());
+if (i === 4) {
+    if (computerScore > playerScore) {
+        alert('THE GAME IS OVER. YOU LOSE.') ;
+    } else if (computerScore === playerScore)
+
+    {
+        alert('THE GAME IS OVER. TIE GAME.');
+    } else
+    {
+        alert('THE GAME IS OVER. YOU WIN.') ;
+    }
+}
+
 
 }
+
+
 
 for (
     i = 0; i < 5; i++
