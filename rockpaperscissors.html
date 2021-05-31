@@ -25,7 +25,7 @@ function playRound() {
 const computerSelection = computerPlay();
 playerSelection = prompt('make a decision');
 let playerSelectionUpper = playerSelection.toUpperCase();
-console.log(computerSelection);
+console.log('-');
 
  
 
@@ -51,7 +51,7 @@ console.log(computerSelection);
                return `You win. ${playerSelectionUpper} beats ${computerSelection}.`;
            }
            else {
-               return 'Invalid choice.'
+               return 'Invalid choice.';
            }
     }
 
@@ -66,8 +66,8 @@ console.log(playRound());
 if (i === 4) {
     if (computerScore > playerScore) {
         alert('THE GAME IS OVER. YOU LOSE.') ;
-    } else if (computerScore === playerScore)
-
+    }
+     else if (computerScore === playerScore)
     {
         alert('THE GAME IS OVER. TIE GAME.');
     } else
@@ -76,10 +76,7 @@ if (i === 4) {
     }
 }
 
-
 }
-
-
 
 for (
     i = 0; i < 5; i++
