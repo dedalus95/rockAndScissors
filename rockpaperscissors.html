@@ -5,7 +5,30 @@
         <meta charset="UTF-8">
     </head>
     <body>
+        <button id = 'btnRock'>ROCK</button>
+        <button id = 'btnPaper'>PAPER</button>
+        <button id = 'btnScissors'>SCISSORS</button>
+
+        <div id = 'showResult'></div>
+        <div id = 'keepComputerScore'></div>
+        <div id = 'keepPlayerScore'></div>
+
         <script>
+
+    const btnRock = document.querySelector('#btnRock');
+    btnRock.addEventListener('click', () => {showResult.textContent = playRound('rock');
+        });
+
+    const btnPaper = document.querySelector('#btnPaper');
+    btnPaper.addEventListener('click', () => {showResult.textContent = playRound('paper');
+        });
+
+    const btnScissors = document.querySelector('#btnScissors');
+    btnScissors.addEventListener('click', () => {showResult.textContent = playRound('scissors');
+        });
+
+  
+
 //Write a function that will randomly return "Rock", "Paper"  or "Scissors"
 function computerPlay() {
     let array = ['Rock', 'Paper', 'Scissors'];
@@ -19,12 +42,14 @@ function computerPlay() {
 
 
 
-function playRound() {
+function playRound(playerSelection) {
 
 const computerSelection = computerPlay();
-playerSelection = prompt('make a decision');
 let playerSelectionUpper = playerSelection.toUpperCase();
-console.log('-');
+document.querySelector('#keepComputerScore');
+document.querySelector('#keepPlayerScore');
+keepComputerScore.textContent = `Computer score is ${computerScore}`;
+keepPlayerScore.textContent = `Player score is ${playerScore}`;
 
  
 
@@ -46,7 +71,7 @@ console.log('-');
            (playerSelectionUpper === 'SCISSORS' && computerSelection === 'Paper') ||
            (playerSelectionUpper === 'ROCK' && computerSelection === 'Scissors'))
            {
-                playerScore++;
+              playerScore++;
                return `You win. ${playerSelectionUpper} beats ${computerSelection}.`;
            }
            else {
@@ -58,32 +83,6 @@ console.log('-');
 let computerScore = parseInt(0);
 let playerScore = parseInt(0);
 
-
-function game() {
-
-console.log(playRound());
-if (i === 4) {
-    if (computerScore > playerScore) {
-        alert('THE GAME IS OVER. YOU LOSE.') ;
-    }
-     else if (computerScore === playerScore)
-    {
-        alert('THE GAME IS OVER. TIE GAME.');
-    } else
-    {
-        alert('THE GAME IS OVER. YOU WIN.') ;
-    }
-}
-
-}
-
-for (
-    i = 0; i < 5; i++
-)
-
-{
-    game();
-}
 
 
 
