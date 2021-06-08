@@ -1,16 +1,46 @@
-const btnRock = document.querySelector('#btnRock');
-    btnRock.addEventListener('click', () => {showResult.textContent = playRound('rock');
-  
-        });
+    
+    
+    
+    const btnRock = document.querySelector('#btnRock');
 
-    const btnPaper = document.querySelector('#btnPaper');
-    btnPaper.addEventListener('click', () => {showResult.textContent = playRound('paper');
-   
+    btnRock.addEventListener('click', () => {
+    showResult.textContent = playRound('rock');
+    showFinalResult.textContent = game();
+
+    if (showFinalResult.textContent) {
+        btnScissors.disabled = true;
+        btnPaper.disabled = true;
+        btnRock.disabled = true;
+    }
     
         });
 
+    const btnPaper = document.querySelector('#btnPaper');
+
+    btnPaper.addEventListener('click', () => {
+    showResult.textContent = playRound('paper');
+    showFinalResult.textContent = game();
+
+    if (showFinalResult.textContent) {
+        btnScissors.disabled = true;
+        btnPaper.disabled = true;
+        btnRock.disabled = true;
+                                    }
+                                              
+    });
+
     const btnScissors = document.querySelector('#btnScissors');
-    btnScissors.addEventListener('click', () => {showResult.textContent = playRound('scissors');
+
+    btnScissors.addEventListener('click', () => {
+    showResult.textContent = playRound('scissors');
+    showFinalResult.textContent = game();
+
+    if (showFinalResult.textContent) {
+        btnScissors.disabled = true;
+        btnPaper.disabled = true;
+        btnRock.disabled = true;
+    }
+    
     
         });
 
@@ -38,7 +68,7 @@ let playerSelectionUpper = playerSelection.toUpperCase();
 document.querySelector('#showResult');
 
 
- 
+ game();
 
     if ((playerSelectionUpper === 'ROCK' && computerSelection === 'Rock') ||
         (playerSelectionUpper === 'SCISSORS' && computerSelection === 'Scissors')||
@@ -72,25 +102,14 @@ let showFinalResult = document.querySelector('#showFinalResult');
 function game() {
 
 
-if (i === 4) {
-    if (computerScore > playerScore) {
-        showFinalResult.textContent = 'THE GAME IS OVER. YOU LOSE.' ;
-    }
-     else if (computerScore === playerScore)
+if (computerScore === 5 && playerScore < computerScore) 
     {
-        showFinalResult.textContent = 'THE GAME IS OVER. TIE GAME.';
-    } else
-    {
-        showFinalResult.textContent = 'THE GAME IS OVER. YOU WIN.' ;
+        return showFinalResult.textContent = 'GAME OVER: YOU LOSE.' ;
     }
-}
+     else if (playerScore === 5 && playerScore > computerScore) 
+    {
+        return showFinalResult.textContent = 'GAME OVER: YOU WIN.';
+    } 
 
 }
 
-for (
-    i = 0; i < 5; i++
-)
-
-{
-    game();
-}
