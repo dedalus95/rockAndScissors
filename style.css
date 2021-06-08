@@ -1,0 +1,15 @@
+
+#buttonContainer {
+    display: flex;
+    align-items: center;
+    height: 130px;
+    width:100%;
+    background-color: rgba(23, 183, 181, 0.7);
+}
+
+button {
+    margin: auto;
+    left: 50%;
+    background-color: pink;
+    border: solid;
+}
