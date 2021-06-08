@@ -42,3 +42,8 @@ button:focus {
     box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.8);
     transition: 0.3s;
 }
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 50px;
+}
