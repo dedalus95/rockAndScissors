@@ -50,7 +50,7 @@
 
 //Write a function that will randomly return "Rock", "Paper"  or "Scissors"
 function computerPlay() {
-    let array = ['Rock', 'Paper', 'Scissors'];
+    let array = ['ROCK', 'PAPER', 'SCISSORS'];
     let pickOneElement = array[Math.floor(Math.random()*array.length)];
         return pickOneElement;
 }
@@ -70,26 +70,26 @@ document.querySelector('#showResult');
 
  game();
 
-    if ((playerSelectionUpper === 'ROCK' && computerSelection === 'Rock') ||
-        (playerSelectionUpper === 'SCISSORS' && computerSelection === 'Scissors')||
-        (playerSelectionUpper === 'PAPER' && computerSelection === 'Paper'))
+    if ((playerSelectionUpper === 'ROCK' && computerSelection === 'ROCK') ||
+        (playerSelectionUpper === 'SCISSORS' && computerSelection === 'SCISSORS')||
+        (playerSelectionUpper === 'PAPER' && computerSelection === 'PAPER'))
     {
-         return showResult.innerHTML = `It\'s a tie.\r\nPlayer score is ${playerScore}.\r\nComputer score is ${computerScore}.` ;
+         return showResult.innerHTML = `TIE. YOU BOTH SELECTED ${playerSelectionUpper}.\r\nPLAYER SCORE IS ${playerScore}.\r\nCOMPUTER SCORE IS ${computerScore}.` ;
     } else if
-         ((playerSelectionUpper === 'ROCK' && computerSelection === 'Paper') ||
-           (playerSelectionUpper === 'PAPER' && computerSelection === 'Scissors') ||
-           (playerSelectionUpper === 'SCISSORS' && computerSelection === 'Rock'))
+         ((playerSelectionUpper === 'ROCK' && computerSelection === 'PAPER') ||
+           (playerSelectionUpper === 'PAPER' && computerSelection === 'SCISSORS') ||
+           (playerSelectionUpper === 'SCISSORS' && computerSelection === 'ROCK'))
            {
                
-               return showResult.innerHTML = `You lose. ${computerSelection} beats ${playerSelectionUpper}.\r\nPlayer score is ${playerScore}.\r\nComputer score is ${++computerScore}.`;
+               return showResult.innerHTML = `LOSS. ${computerSelection} BEATS ${playerSelectionUpper}.\r\nPLAYER SCORE IS ${playerScore}.\r\nCOMPUTER SCORE IS ${++computerScore}.`;
            }
            else if 
-           ((playerSelectionUpper === 'PAPER' && computerSelection === 'Rock') ||
-           (playerSelectionUpper === 'SCISSORS' && computerSelection === 'Paper') ||
-           (playerSelectionUpper === 'ROCK' && computerSelection === 'Scissors'))
+           ((playerSelectionUpper === 'PAPER' && computerSelection === 'ROCK') ||
+           (playerSelectionUpper === 'SCISSORS' && computerSelection === 'PAPER') ||
+           (playerSelectionUpper === 'ROCK' && computerSelection === 'SCISSORS'))
            {
               
-              return showResult.innerHTML = `You win. ${playerSelectionUpper} beats ${computerSelection}.\r\nPlayer score is ${++playerScore}.\r\nComputer score is ${computerScore}.`;
+              return showResult.innerHTML = `WIN. ${playerSelectionUpper} BEATS ${computerSelection}.\r\nPLAYER SCORE IS ${++playerScore}.\r\nCOMPUTER SCORE IS ${computerScore}.`;
            }
            
     }
