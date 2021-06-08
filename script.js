@@ -64,24 +64,24 @@ document.querySelector('#showResult');
            
     }
 
-
 let computerScore = parseInt(0);
 let playerScore = parseInt(0);
 
+let showFinalResult = document.querySelector('#showFinalResult');
 
 function game() {
 
 
 if (i === 4) {
     if (computerScore > playerScore) {
-        alert('THE GAME IS OVER. YOU LOSE.') ;
+        showFinalResult.textContent = 'THE GAME IS OVER. YOU LOSE.' ;
     }
      else if (computerScore === playerScore)
     {
-        alert('THE GAME IS OVER. TIE GAME.');
+        showFinalResult.textContent = 'THE GAME IS OVER. TIE GAME.';
     } else
     {
-        alert('THE GAME IS OVER. YOU WIN.') ;
+        showFinalResult.textContent = 'THE GAME IS OVER. YOU WIN.' ;
     }
 }
 
