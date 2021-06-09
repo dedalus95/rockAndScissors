@@ -52,10 +52,10 @@ nav {
 
 @media (max-width: 1300px) {
     #showFinalResult{
-        font-size: 60px;
+        font-size: 8vw;
     }
 
     #showResult {
-        font-size: 30px;
+        font-size: 3vw;
     }
 }
